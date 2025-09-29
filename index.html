@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>>>></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="pageInput" placeholder="hasło?">
+</body>
+</html>
+
+<script>
+    const input = document.getElementById("pageInput");
+
+    input.addEventListener("keypress", async function(event) {
+        if (event.key === "Enter") {
+            const value = input.value.trim();
+            if (value) {
+                const url = "/" + value;
+                try {
+                    const response = await fetch(url, { method: "HEAD" });
+                    if (response.ok) {
+                        window.location.href = url;
+                    } else {
+                        window.location.href = "/404";
+                    }
+                } catch (e) {
+                    window.location.href = "/404";
+                }
+            }
+        }
+    });
+</script>
