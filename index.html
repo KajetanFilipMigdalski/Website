@@ -1,36 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>>>></title>
     <link rel="stylesheet" href="css/index-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="text" id="pageInput" placeholder="hasło?">
+    <div class="TopPanel">
+        <div class="Logo" id="hoverText">(·_·)</div>
+        <div class="Something">🌞</div>
+    </div>
+    <div class="Content">
+        <div class="Label">In nothing, <br> you may find everything at once.</div>
+        <div class="Input">
+            <input id="pageInput" type="text" name="text" placeholder="Type anything...">
+        </div>
+    </div>
+    <div class="BottomPanel">
+        <div class="Links">
+            <a href="https://github.com/KajetanFilipMigdalski">Github</a>
+            <a href="https://www.facebook.com/profile.php?id=100077559182250">Facebook</a>
+        </div>
+        <div class="Something2"></div>
+    </div>
 </body>
 </html>
 
 <script>
     const input = document.getElementById("pageInput");
 
-    input.addEventListener("keypress", async function(event) {
+    input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             const value = input.value.trim();
             if (value) {
-                const url = "/" + value;
-                try {
-                    const response = await fetch(url, { method: "HEAD" });
-                    if (response.ok) {
-                        window.location.href = url;
-                    } else {
-                        window.location.href = "/404";
-                    }
-                } catch (e) {
-                    window.location.href = "/404";
-                }
+
+                window.location.href = "/" + value;
             }
         }
     });
 
+const text = document.getElementById("hoverText");
+
+text.addEventListener("mouseenter", () => {
+    text.textContent = "(o_o)";
+});
+
+text.addEventListener("mouseleave", () => {
+    text.textContent = "(·_·)";
+});
 </script>
