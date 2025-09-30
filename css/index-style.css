@@ -1,24 +1,86 @@
-html, body {
-    margin: 0;
-    height: 100%;
-}
-
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background-color: #212121;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     color: white;
 }
 
-#pageInput {
-    border: 2px solid #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #212121;
-    font-size: small;
-    font-weight: bold;
+.TopPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     color: white;
+}
+
+.Logo {
+    font-size: 24px;
+}
+
+.Something {
+    font-size: 24px;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.Label {
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+}
+
+.Input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.Input input {
+    height: 30px;
+    width: 400px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #ffffff;
+    caret-color: #3f3f3f;
+    background-color: #121212;
+    padding: 5px;
+    font-family: monospace;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.BottomPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.Links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: solid underline;
 }
