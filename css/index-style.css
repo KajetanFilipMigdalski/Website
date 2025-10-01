@@ -36,6 +36,12 @@ body {
     margin: 0;
 }
 
+.Error {
+    font-size: 96px;
+    text-align: center;
+    margin: 0;
+}
+
 .Input, .Button {
     display: flex;
     justify-content: center;
@@ -98,4 +104,5 @@ a {
 a:hover {
     text-decoration: solid underline;
 }
+
 
