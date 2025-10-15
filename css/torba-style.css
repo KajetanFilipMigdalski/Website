@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #E7F2EF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    }
+
+.Container {
+    width: 400px;
+    height: 300px;
+    background: rgb(0, 0, 0);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.Header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+.Label {
+    color: white;
+    padding-bottom: 0.5rem;
+}
+.Hint {
+    color: #A1A1A1;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: #4a4a4a 2px solid;
+    margin-bottom: 2rem;
+}
+.Guess{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+#Input {
+    width: 70%;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #4a4a4a;
+    caret-color: #3f3f3f;
+    background-color: #000000;
+    padding: 5px;
+    letter-spacing: 1px;
+    color: white;
+}
+.Button button{    
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #4a4a4a;
+    caret-color: #3f3f3f;
+    background-color: #000000;
+    padding: 5px;
+    letter-spacing: 1px;
+    color: white;
+}
+.Score {
+    width: 10;
+    height: 300px;
+    background: #00DFA2;
+    border-radius: 8px;
+    margin: 0.4rem 0rem;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.emoji {
+    position: fixed;
+    top: 0;
+    font-size: 2rem;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 999;
+}
